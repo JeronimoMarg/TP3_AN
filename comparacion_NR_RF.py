@@ -137,7 +137,7 @@ def newton_secante(f, df, d2f, xn, xn_1, tol=1e-7, max_iter=100):
         xn_1 = xn
         xn = xNext
 
-    return xn, errors
+    return abs(xn), errors
 
 #VALORES PARA NEWTON
 x0_newton = 2
@@ -147,8 +147,8 @@ a_regula = 1
 b_regula = 2
 
 #VALORES PARA NEWTON-SECANTE
-a_n = 1
-b_n = 2
+a_n = -8
+b_n = 8
 
 # Ejecutar los métodos
 root_newton, errors_newton = newton_raphson(f, df, x0_newton)
