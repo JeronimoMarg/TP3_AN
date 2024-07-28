@@ -39,7 +39,7 @@ Kb_amoniaco = 10**(-pKa_amoniaco)
 
 Kw = 10**(-14) # Constante de disociación del agua
 
-N = 10 # Número de puntos a lo largo de la columna
+N = 100 # Número de puntos a lo largo de la columna
 
 
 # Definir las concentraciones lineales
@@ -86,6 +86,7 @@ for i in range(N):
         ph = -np.log10(H)  # Conversión de la concentración de H+ a pH
         ph_values.append(ph)
         print(f"pH en punto {i+1}: {ph:.5f} en {len(errors)} iteraciones.")
+        print(f"H: {H}")
     else:
         ph_values.append(np.nan)
         print(f"pH en punto {i+1}: no valido (H = {H})")
